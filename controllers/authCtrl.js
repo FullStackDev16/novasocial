@@ -253,7 +253,6 @@ const authCtrl = {
                 await newUser.save()
 
                 const populatedUser = await Users.findOne({ _id: newUser._id })
-                    .select("-password")
                     .populate({
                         path: "following",
                         select: "-password",
