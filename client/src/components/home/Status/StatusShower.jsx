@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => {
             top: 8,
             color: theme.palette.grey[900],
             strokeWidth: 1,
-            stroke: theme.palette.text.primary,
+            stroke: theme.palette.grey[900],
         },
         DeleteIcon: {
             position: "absolute !important",
@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => {
             top: 8,
             color: theme.palette.grey[900],
             strokeWidth: 1,
-            stroke: theme.palette.text.primary,
+            stroke: theme.palette.grey[900],
         },
     };
 });
