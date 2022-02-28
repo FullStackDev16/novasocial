@@ -84,7 +84,6 @@ const authCtrl = {
             const { email, password } = req.body;
 
             const user = await Users.findOne({ email })
-                .select("-password")
                 .populate({
                     path: "following",
                     select: "-password",
@@ -94,8 +93,7 @@ const authCtrl = {
                     select: "-password",
                 })
 
-            if (!user)
-                return res.status(400).json({ msg: "This email does not exists." });
+            if (!user) { return res.status(400).json({ msg: "This email does not exists" }) }
 
             const isMatch = await bcrypt.compare(password, user.password);
             if (!isMatch)
