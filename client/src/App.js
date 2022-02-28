@@ -51,7 +51,7 @@ function App() {
     if(isOnline){
       dispatch(refreshToken())
       
-      const socket = io("http://novasocial.herokuapp.com:5000", { transports: ['websocket'] })
+      const socket = io()
       dispatch({ type: GLOBALTYPES.SOCKET, payload: socket })
       return () => socket.close()
     }
