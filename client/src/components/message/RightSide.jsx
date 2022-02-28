@@ -308,27 +308,14 @@ const RightSide = () => {
                         <Typography variant="subtitle2">{user.fullname}</Typography>
                     </Box>
                     <Box>
-                        {auth.user.following.find(followUser => followUser._id === user._id) ?
+                        {auth.user.following.find(followUser => followUser._id === user._id) &&
                             <>
-                                <Tooltip title="audio call" arrow>
-                                    <IconButton size="small" onClick={handleAudioCall}>
-                                        <CallOutlined fontSize="small" />
-                                    </IconButton>
-                                </Tooltip>
-                                <Tooltip title="video call" arrow>
-                                    <IconButton size="small" onClick={handleVideoCall} >
-                                        <VideoCallOutlined fontSize="small" />
-                                    </IconButton>
-                                </Tooltip>
-                            </>
-                            :
-                            <>
-                                <Tooltip title="follow User to audio call" arrow>
+                                <Tooltip title="audio calling is coming soon" arrow>
                                     <IconButton disabled size="small" onClick={handleAudioCall}>
                                         <CallOutlined fontSize="small" />
                                     </IconButton>
                                 </Tooltip>
-                                <Tooltip title="follow User to video call" arrow>
+                                <Tooltip title="video calling is coming soon" arrow>
                                     <IconButton disabled size="small" onClick={handleVideoCall} >
                                         <VideoCallOutlined fontSize="small" />
                                     </IconButton>

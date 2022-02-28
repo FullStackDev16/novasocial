@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => {
 const CallModal = () => {
     const classes = useStyles()
 
-    const { call, auth, peer, socket, } = useSelector(state => state)
+    const { call, auth, peer, socket } = useSelector(state => state)
     const dispatch = useDispatch()
 
     const [hours, setHours] = useState(0)
@@ -108,8 +108,15 @@ const CallModal = () => {
 
     // Stream Media
     const openStream = (video) => {
-        const config = { audio: true, video }
-        return navigator.mediaDevices.getUserMedia(config)
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices.getUserMedia({ audio: true, video })
+                .then(mediaStream => {
+                    return mediaStream
+                }).catch(err => {
+                    dispatch({ type: GLOBALTYPES.ALERT, payload: { error: "Something went wrong while accessing your webcam or camera" } })
+                    return false
+                })
+        }
     }
     const playStream = (tag, stream) => {
         let video = tag;
@@ -242,7 +249,7 @@ const CallModal = () => {
                                     {(call.recipient === auth.user._id && !answer) &&
                                         <>{call.video
                                             ? <Tooltip title="Answer Call">
-                                                <IconButton color="primary"  onClick={handleAnswer}>
+                                                <IconButton color="primary" onClick={handleAnswer}>
                                                     <CallEndOutlined />
                                                 </IconButton>
                                             </Tooltip>

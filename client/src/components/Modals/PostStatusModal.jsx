@@ -148,10 +148,10 @@ const StatusModal = () => {
         if (status.onEdit) {
             dispatch(updatePost({ content, images, auth, status }));
         } else {
-            if (images.length !== 0) {
+            if (images.length !== 0 || content) {
                 dispatch(createPost({ content, images, auth, socket }));
             } else {
-                dispatch({ type: GLOBALTYPES.ALERT, payload: { error: "Please add an image or video" } })
+                dispatch({ type: GLOBALTYPES.ALERT, payload: { error: "Please add your content or Media" } })
             }
         }
 

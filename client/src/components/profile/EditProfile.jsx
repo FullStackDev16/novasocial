@@ -35,6 +35,7 @@ const useStyles = makeStyles((theme) => {
       [theme.breakpoints.down("md")]: {
         paddingBottom: 10,
         paddingRight: 0,
+        position: "static",
       }
     },
     tab: {
@@ -44,7 +45,10 @@ const useStyles = makeStyles((theme) => {
 
     tabPanelsWrapper: {
       flexGrow: 1,
-      marginLeft: "180px"
+      marginLeft: "180px",
+      [theme.breakpoints.down("md")]: {
+        marginLeft: "0px",
+      }
     },
     tabPanelZeroContentWrapper: {
     },

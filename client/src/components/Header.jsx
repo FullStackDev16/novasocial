@@ -357,7 +357,9 @@ const Header = ({ children }) => {
             <MenuIcon fontSize="small" />
           </IconButton>
 
+          <Link to="/">
           <Logo className={classes.appBarLogo} />
+          </Link>
           {searchBase}
 
           <Box sx={{ display: 'flex', justifyContent: "right" }}>
@@ -400,7 +402,11 @@ const Header = ({ children }) => {
       </Box>
 
       <Drawer PaperProps={{className:classes.mobileDrawerPaper}} variant="temporary" className={classes.mobileDrawer} open={mobileDrawer} onClick={handleMobileDrawerToggle} onClose={handleMobileDrawerToggle}>
-        <Toolbar><Logo className={classes.appBarLogoSecond} /></Toolbar>
+        <Toolbar>
+        <Link to="/">
+          <Logo className={classes.appBarLogoSecond} />
+        </Link>
+          </Toolbar>
         {drawerInner}
       </Drawer>
 

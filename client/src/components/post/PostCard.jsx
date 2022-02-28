@@ -53,7 +53,6 @@ const PostCard = ({ post }) => {
                     <Box className={classes.comments}>
                         <Box className={classes.commentsTopBar}>
                             <Typography variant="h6" textAlign="center" className={classes.commentsTitle}>Comments</Typography>
-                            <IconButton><Sort/></IconButton>
                         </Box>
                         <PostCardInputComment post={post} />
                         <PostCardComments post={post} />

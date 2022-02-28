@@ -11,6 +11,7 @@ const fetch = require('node-fetch')
 const client = new OAuth2(process.env.MAILING_SERVICE_CLIENT_ID)
 const { CLIENT_URL } = process.env;
 var rug = require('random-username-generator');
+const forgotPasswordContent = require("./sendmail/content/forgotPassword");
 
 const authCtrl = {
     register: async (req, res) => {
@@ -43,7 +44,7 @@ const authCtrl = {
             const activation_token = createActivationToken(newUser);
 
             const url = `${CLIENT_URL}/user/activate/${activation_token}`;
-            sendEmail(email, url, "Email verification", verificationEmailContent(fullname, url));
+            sendEmail(email, "novaSocial Email Verification", "Verify Your Email To Complete Registration On novaSocial", verificationEmailContent(fullname, url));
 
             res.json({
                 msg: "Register Success! Please activate your email to start",
@@ -182,7 +183,7 @@ const authCtrl = {
 
             const access_token = createAccessToken({ id: user._id })
             const url = `${CLIENT_URL}/user/reset/${access_token}`
-            sendEmail(email, url, "Reset your password", verificationEmailContent(user.fullname, url))
+            sendEmail(email, "novaSocial Password Reset ","Reset Your Password to Login to novaSocial", forgotPasswordContent(user.fullname, url))
             res.json({ msg: "Re-send the password, please check your email." })
         } catch (err) {
             return res.status(500).json({ msg: err.message })

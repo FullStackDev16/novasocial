@@ -18,7 +18,7 @@ const oauth2Client = new OAuth2(
 )
 
 // send mail
-const sendEmail = (to, url, txt,content) => {
+const sendEmail = (to, subject, txt, content) => {
     oauth2Client.setCredentials({
         refresh_token: MAILING_SERVICE_REFRESH_TOKEN
     })
@@ -39,14 +39,14 @@ const sendEmail = (to, url, txt,content) => {
     const mailOptions = {
         from: `'novaSocial' <${SENDER_EMAIL_ADDRESS}>`,
         to: to,
-        subject: "novaSocial Email Verification",
-        text: "Email Verification for Dook",
+        subject:subject,
+        text: txt,
         html: content ,
        
     }
 
     smtpTransport.sendMail(mailOptions, (err, infor) => {
-        if(err) console.log( err);
+        if(err) console.log(err);
         return infor
     })
 }

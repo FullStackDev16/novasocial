@@ -1,130 +1,286 @@
 const verificationEmailContent = (name, url) => {
-  return `  <body class="clean-body u_body" style="margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #ffffff;color: #000000;line-height: inherit;">
-  <table style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 320px;margin: 0 auto;background-color: #ffffff;width: 100%;line-height: inherit;color: #000000;" cellpadding="0" cellspacing="0">
-     <tbody style="line-height: inherit;">
-        <tr style="vertical-align: top;line-height: inherit;border-collapse: collapse;">
-           <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;line-height: inherit;color: #000000;">
-              <div class="u-row-container" style="padding: 0px;background-color: transparent;line-height: inherit;">
-                 <div class="u-row" style="margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #dff1ff;line-height: inherit;width: calc(100% - 40px) !important;">
-                    <div style="border-collapse: collapse;display: table;width: 100%;background-color: transparent;line-height: inherit;">
-                       <div class="u-col u-col-100" style="max-width: 320px;min-width: 650px;display: table-cell;vertical-align: top;line-height: inherit;width: 650px !important;">
-                          <div style="width: 100% !important;line-height: inherit;margin: 0 auto;">
-                             <div style="padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;line-height: inherit;">
-                                <table style="font-family: 'Montserrat',sans-serif;line-height: inherit;color: #000000;vertical-align: top;border-collapse: collapse;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                                   <tbody style="line-height: inherit;">
-                                      <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse;">
-                                         <td style="overflow-wrap: break-word;word-break: break-word;padding: 30px 0px;font-family: 'Montserrat',sans-serif;line-height: inherit;color: #000000;vertical-align: top;border-collapse: collapse;" align="left">
-                                            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="line-height: inherit;color: #000000;vertical-align: top;border-collapse: collapse;">
-                                               <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse;">
-                                                  <td style="padding-right: 0px;padding-left: 0px;line-height: inherit;color: #000000;vertical-align: top;border-collapse: collapse;" align="center">
-                                                     <img align="center" border="0" src="https://i.ibb.co/RQ01yQw/logo512.png" alt="logo" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 23%;max-width: 149.5px;line-height: inherit;" width="149.5">
-                                                  </td>
-                                               </tr>
-                                            </table>
-                                         </td>
-                                      </tr>
-                                   </tbody>
-                                </table>
-                                <table style="font-family: 'Montserrat',sans-serif;line-height: inherit;color: #000000;vertical-align: top;border-collapse: collapse;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                                   <tbody style="line-height: inherit;">
-                                      <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse;">
-                                         <td style="overflow-wrap: break-word;word-break: break-word;padding: 0px;font-family: 'Montserrat',sans-serif;line-height: inherit;color: #000000;vertical-align: top;border-collapse: collapse;" align="left">
-                                            <div style="color: #018eea; line-height: 170%; text-align: left; word-wrap: break-word;">
-                                               <p style="padding-left: 20px;padding-right: 20px;font-size: 24px;line-height: 170%;text-align: center;margin: 0;">Congratulation  ${name} ! You Successfully Completed your Registration on Dook
-                                               </p>
-        
-                                            </div>
-                                         </td>
-                                      </tr>
-                                   </tbody>
-                                </table>
-                                <table style="font-family: 'Montserrat',sans-serif;line-height: inherit;color: #000000;vertical-align: top;border-collapse: collapse;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                                   <tbody style="line-height: inherit;">
-                                      <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse;">
-                                         <td style="overflow-wrap: break-word;word-break: break-word;padding: 0px;font-family: 'Montserrat',sans-serif;line-height: inherit;color: #000000;vertical-align: top;border-collapse: collapse;" align="left">
-                                            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="line-height: inherit;color: #000000;vertical-align: top;border-collapse: collapse;">
-                                               <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse;">
-                                                  <td style="padding-right: 0px;padding-left: 0px;line-height: inherit;color: #000000;vertical-align: top;border-collapse: collapse;" align="center">
-                                                     <img align="center" border="0" src="https://i.ibb.co/CwvPK1s/email.jpg" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 650px;line-height: inherit;" width="650">
-                                                  </td>
-                                               </tr>
-                                            </table>
-                                         </td>
-                                      </tr>
-                                   </tbody>
-                                </table>
-                             </div>
-                          </div>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-              <div class="u-row-container" style="padding: 0px;background-color: transparent;line-height: inherit;">
-                 <div class="u-row" style="margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #f3fbfd;line-height: inherit;width: calc(100% - 40px) !important;">
-                    <div style="border-collapse: collapse;display: table;width: 100%;background-color: transparent;line-height: inherit;">
-                       <div class="u-col u-col-100" style="max-width: 320px;min-width: 650px;display: table-cell;vertical-align: top;line-height: inherit;width: 650px !important;">
-                          <div style="width: 100% !important;line-height: inherit;margin: 0 auto;">
-                             <div style="padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;line-height: inherit;">
-                                <table id="u_content_button_1" style="font-family: 'Montserrat',sans-serif;line-height: inherit;color: #000000;vertical-align: top;border-collapse: collapse;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                                   <tbody style="line-height: inherit;">
-                                      <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse;">
-                                         <td style="overflow-wrap: break-word;word-break: break-word;padding: 10px;font-family: 'Montserrat',sans-serif;line-height: inherit;color: #000000;vertical-align: top;border-collapse: collapse;" align="left">
-                                            <div align="center" style="line-height: inherit;">
-                                               <a href=${url} target="_blank" style="box-sizing: border-box;display: inline-block;font-family: 'Montserrat',sans-serif;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF;background-color: #0088ee;border-radius: 63px;-webkit-border-radius: 63px;-moz-border-radius: 63px;width: auto;max-width: 100%;overflow-wrap: break-word;word-break: break-word;word-wrap: break-word;mso-border-alt: none;border-top-color: #CCC;border-top-style: solid;border-top-width: 0px;border-left-color: #CCC;border-left-style: solid;border-left-width: 0px;border-right-color: #CCC;border-right-style: solid;border-right-width: 0px;border-bottom-color: #0275a4;border-bottom-style: solid;border-bottom-width: 5px;line-height: inherit;">
-                                               <span class="v-padding" style="display:block;padding:14px 30px;line-height:100%;"><span style="font-size: 14px; line-height: 14px;"><strong style="line-height: inherit;"><span style="line-height: 14px; font-size: 14px;">Click Here to Verify Your
-                                               Email</span></strong></span></span>
-                                               </a>
-                                            </div>
-                                         </td>
-                                      </tr>
-                                   </tbody>
-                                </table>
-                                <table style="font-family: 'Montserrat',sans-serif;line-height: inherit;color: #000000;vertical-align: top;border-collapse: collapse;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                                   <tbody style="line-height: inherit;">
-                                      <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse;">
-                                         <td style="overflow-wrap: break-word;word-break: break-word;padding: 18px 50px 50px;font-family: 'Montserrat',sans-serif;line-height: inherit;color: #000000;vertical-align: top;border-collapse: collapse;" align="left">
-                                            <div style="color: #5f5f5f; line-height: 140%; text-align: center; word-wrap: break-word;">
-                                               <p style="font-size: 14px;line-height: 140%;text-align: center;margin: 0;"><span style="font-size: 12px; line-height: 16.8px;">We don't send any irrelevant email or
-                                                  sell your data </span>
-                                               </p>
-                                            </div>
-                                         </td>
-                                      </tr>
-                                   </tbody>
-                                </table>
-                             </div>
-                          </div>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-              <div class="u-row-container" style="padding: 0px;background-color: transparent;line-height: inherit;">
-                 <div class="u-row" style="margin: 0 auto;min-width: 320px;max-width: 650px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: #151418;line-height: inherit;width: calc(100% - 40px) !important;">
-                    <div style="border-collapse: collapse;display: table;width: 100%;background-color: transparent;line-height: inherit;">
-                       <div class="u-col u-col-100" style="max-width: 320px;min-width: 650px;display: table-cell;vertical-align: top;line-height: inherit;width: 650px !important;">
-                          <div style="width: 100% !important;line-height: inherit;margin: 0 auto;">
-                             <div style="padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;line-height: inherit;">
-                                <table style="font-family: 'Montserrat',sans-serif;line-height: inherit;color: #000000;vertical-align: top;border-collapse: collapse;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
-                                   <tbody style="line-height: inherit;">
-                                      <tr style="line-height: inherit;vertical-align: top;border-collapse: collapse;">
-                                         <td style="overflow-wrap: break-word;word-break: break-word;padding: 18px;font-family: 'Montserrat',sans-serif;line-height: inherit;color: #000000;vertical-align: top;border-collapse: collapse;" align="left">
-                                            <div style="color: #ffffff; line-height: 100%; text-align: center; word-wrap: break-word;">
-                                               <p style="font-size: 12px;line-height: 100%;margin: 0;">Copyright novaSocial @2022 | All Rights Reserved</p>
-                                            </div>
-                                         </td>
-                                      </tr>
-                                   </tbody>
-                                </table>
-                             </div>
-                          </div>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-           </td>
-        </tr>
-     </tbody>
+  return ` <!DOCTYPE html>
+
+  <html lang="en" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+  <title></title>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <!--[if mso]><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml><![endif]-->
+  <!--[if !mso]><!-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css"/>
+  <!--<![endif]-->
+  <style>
+          * {
+              box-sizing: border-box;
+          }
+  
+          body {
+              margin: 0;
+              padding: 0;
+          }
+  
+          a[x-apple-data-detectors] {
+              color: inherit !important;
+              text-decoration: inherit !important;
+          }
+  
+          #MessageViewBody a {
+              color: inherit;
+              text-decoration: none;
+          }
+  
+          p {
+              line-height: inherit
+          }
+  
+          @media (max-width:620px) {
+              .icons-inner {
+                  text-align: center;
+              }
+  
+              .icons-inner td {
+                  margin: 0 auto;
+              }
+  
+              .row-content {
+                  width: 100% !important;
+              }
+  
+              .image_block img.big {
+                  width: auto !important;
+              }
+  
+              .column .border {
+                  display: none;
+              }
+  
+              .stack .column {
+                  width: 100%;
+                  display: block;
+              }
+          }
+      </style>
+  </head>
+  <body style="background-color: #d9dffa; margin: 0; padding: 0; -webkit-text-size-adjust: none; text-size-adjust: none;">
+  <table border="0" cellpadding="0" cellspacing="0" class="nl-container" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #d9dffa;" width="100%">
+  <tbody>
+  <tr>
+  <td>
+  <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #cfd6f4;" width="100%">
+  <tbody>
+  <tr>
+  <td>
+  <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 600px;" width="600">
+  <tbody>
+  <tr>
+  <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 20px; padding-bottom: 0px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="100%">
+  <table border="0" cellpadding="0" cellspacing="0" class="image_block" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+  <tr>
+  <td style="width:100%;padding-right:0px;padding-left:0px;">
+  <div align="center" style="line-height:10px"><img alt="Card Header with Border and Shadow Animated" class="big" src="https://i.ibb.co/BnQM4ds/animated-header.gif" style="display: block; height: auto; border: 0; width: 600px; max-width: 100%;" title="Card Header with Border and Shadow Animated" width="600"/></div>
+  </td>
+  </tr>
   </table>
-</body>`;
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #d9dffa; background-image: url('https://i.ibb.co/QCwgH6N/body-background-2.png'); background-position: top center; background-repeat: repeat;" width="100%">
+  <tbody>
+  <tr>
+  <td>
+  <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 600px;" width="600">
+  <tbody>
+  <tr>
+  <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-left: 50px; padding-right: 50px; padding-top: 15px; padding-bottom: 15px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="100%">
+  <table border="0" cellpadding="10" cellspacing="0" class="text_block" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;" width="100%">
+  <tr>
+  <td>
+  <div style="font-family: sans-serif">
+  <div style="font-size: 14px; mso-line-height-alt: 16.8px; color: #506bec; line-height: 1.2; font-family: Helvetica Neue, Helvetica, Arial, sans-serif;">
+  <p style="margin: 0; font-size: 14px;"><strong><span style="font-size:38px;">Verify Your Email</span></strong></p>
+  </div>
+  </div>
+  </td>
+  </tr>
+  </table>
+  <table border="0" cellpadding="10" cellspacing="0" class="text_block" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;" width="100%">
+  <tr>
+  <td>
+  <div style="font-family: sans-serif">
+  <div style="font-size: 14px; mso-line-height-alt: 16.8px; color: #40507a; line-height: 1.2; font-family: Helvetica Neue, Helvetica, Arial, sans-serif;">
+  <p style="margin: 0; font-size: 14px;"><span style="font-size:16px;">Hey, thanks for registering on novaSocial</span></p>
+  </div>
+  </div>
+  </td>
+  </tr>
+  </table>
+  <table border="0" cellpadding="10" cellspacing="0" class="text_block" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;" width="100%">
+  <tr>
+  <td>
+  <div style="font-family: sans-serif">
+  <div style="font-size: 14px; mso-line-height-alt: 16.8px; color: #40507a; line-height: 1.2; font-family: Helvetica Neue, Helvetica, Arial, sans-serif;">
+  <p style="margin: 0; font-size: 14px;"><span style="font-size:16px;">Let’s Verify Your Email!</span></p>
+  </div>
+  </div>
+  </td>
+  </tr>
+  </table>
+  <table border="0" cellpadding="0" cellspacing="0" class="button_block" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+  <tr>
+  <td style="padding-bottom:20px;padding-left:10px;padding-right:10px;padding-top:20px;text-align:left;">
+  <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://www.example.com/" style="height:48px;width:212px;v-text-anchor:middle;" arcsize="34%" stroke="false" fillcolor="#506bec"><w:anchorlock/><v:textbox inset="5px,0px,0px,0px"><center style="color:#ffffff; font-family:Arial, sans-serif; font-size:15px"><![endif]--><a href="${url}" style="text-decoration:none;display:inline-block;color:#ffffff;background-color:#506bec;border-radius:16px;width:auto;border-top:0px solid TRANSPARENT;border-right:0px solid TRANSPARENT;border-bottom:0px solid TRANSPARENT;border-left:0px solid TRANSPARENT;padding-top:8px;padding-bottom:8px;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;text-align:center;mso-border-alt:none;word-break:keep-all;" target="_blank"><span style="padding-left:25px;padding-right:20px;font-size:15px;display:inline-block;letter-spacing:normal;"><span style="font-size: 16px; line-height: 2; word-break: break-word; mso-line-height-alt: 32px;"><span data-mce-style="font-size: 15px; line-height: 30px;" style="font-size: 15px; line-height: 30px;"><strong>VERIFY YOUR EMAIL</strong></span></span></span></a>
+  <!--[if mso]></center></v:textbox></v:roundrect><![endif]-->
+  </td>
+  </tr>
+  </table>
+  <table border="0" cellpadding="10" cellspacing="0" class="text_block" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;" width="100%">
+  <tr>
+  <td>
+  <div style="font-family: sans-serif">
+  <div style="font-size: 14px; mso-line-height-alt: 16.8px; color: #40507a; line-height: 1.2; font-family: Helvetica Neue, Helvetica, Arial, sans-serif;">
+  <p style="margin: 0; font-size: 14px;"><span style="font-size:14px;">Having trouble? <a href="http://www.example.com/" rel="noopener" style="text-decoration: none; color: #40507a;" target="_blank" title="@socialaccount"><strong>support@novaSocial.com</strong></a></span></p>
+  </div>
+  </div>
+  </td>
+  </tr>
+  </table>
+  <table border="0" cellpadding="10" cellspacing="0" class="text_block" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;" width="100%">
+  <tr>
+  <td>
+  </td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-3" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+  <tbody>
+  <tr>
+  <td>
+  <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 600px;" width="600">
+  <tbody>
+  <tr>
+  <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 0px; padding-bottom: 5px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="100%">
+  <table border="0" cellpadding="0" cellspacing="0" class="image_block" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+  <tr>
+  <td style="width:100%;padding-right:0px;padding-left:0px;">
+  <div align="center" style="line-height:10px"><img alt="Card Bottom with Border and Shadow Image" class="big" src="https://i.ibb.co/w0N5jxY/bottom-img.png" style="display: block; height: auto; border: 0; width: 600px; max-width: 100%;" title="Card Bottom with Border and Shadow Image" width="600"/></div>
+  </td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-4" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+  <tbody>
+  <tr>
+  <td>
+  <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 600px;" width="600">
+  <tbody>
+  <tr>
+  <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 20px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="100%">
+  <table border="0" cellpadding="10" cellspacing="0" class="image_block" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+  <tr>
+  <td>
+  <div align="center" style="line-height:10px"><a href="http://www.example.com/" style="outline:none" tabindex="-1" target="_blank"><img alt="Your Logo" src="https://i.ibb.co/Q8GtLtz/imageedit-9-4629715604.png" style="display: block; height: auto; border: 0; width: 145px; max-width: 100%;" title="Your Logo" width="145"/></a></div>
+  </td>
+  </tr>
+  </table>
+  <table border="0" cellpadding="10" cellspacing="0" class="social_block" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+  <tr>
+  <td>
+  <table align="center" border="0" cellpadding="0" cellspacing="0" class="social-table" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="72px">
+  <tr>
+  <td style="padding:0 2px 0 2px;"><a href="https://www.instagram.com/" target="_blank"><img alt="Instagram" height="32" src="https://i.ibb.co/0f4vmGh/instagram2x.png" style="display: block; height: auto; border: 0;" title="instagram" width="32"/></a></td>
+  <td style="padding:0 2px 0 2px;"><a href="https://www.twitter.com/" target="_blank"><img alt="Twitter" height="32" src="https://i.ibb.co/6vmrnm2/twitter2x.png" style="display: block; height: auto; border: 0;" title="twitter" width="32"/></a></td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+  </table>
+  <table border="0" cellpadding="10" cellspacing="0" class="text_block" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;" width="100%">
+  <tr>
+  <td>
+  <div style="font-family: sans-serif">
+  <div style="font-size: 14px; mso-line-height-alt: 16.8px; color: #97a2da; line-height: 1.2; font-family: Helvetica Neue, Helvetica, Arial, sans-serif;">
+  <p style="margin: 0; font-size: 14px; text-align: center;">This link will expire in the next 5 minutes.<br/>Please feel free to contact us at novaSocial@support.com.</p>
+  </div>
+  </div>
+  </td>
+  </tr>
+  </table>
+  <table border="0" cellpadding="10" cellspacing="0" class="text_block" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;" width="100%">
+  <tr>
+  <td>
+  <div style="font-family: sans-serif">
+  <div style="font-size: 14px; mso-line-height-alt: 16.8px; color: #97a2da; line-height: 1.2; font-family: Helvetica Neue, Helvetica, Arial, sans-serif;">
+  <p style="margin: 0; text-align: center; font-size: 12px;"><span style="font-size:12px;">Copyright© 2021 Your Brand.</span></p>
+  <p id="m_8010100107078456808text01" style="margin: 0; text-align: center; font-size: 12px;"><span style="font-size:12px;"><a href="http://www.example.com/" rel="noopener" style="text-decoration: underline; color: #97a2da;" target="_blank" title="Unsubscribe ">Unsubscribe</a> | <a href="http://www.example.com/" rel="noopener" style="text-decoration: underline; color: #97a2da;" target="_blank" title="Manage your preferences">Manage your preferences</a> | <a href="http://www.example.com/" rel="noopener" style="text-decoration: underline; color: #97a2da;" target="_blank" title="Privacy Policy">Privacy Policy</a></span></p>
+  </div>
+  </div>
+  </td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-5" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+  <tbody>
+  <tr>
+  <td>
+  <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 600px;" width="600">
+  <tbody>
+  <tr>
+  <td class="column column-1" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; vertical-align: top; padding-top: 5px; padding-bottom: 5px; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;" width="100%">
+  <table border="0" cellpadding="0" cellspacing="0" class="icons_block" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+  <tr>
+  <td style="vertical-align: middle; color: #9d9d9d; font-family: inherit; font-size: 15px; padding-bottom: 5px; padding-top: 5px; text-align: center;">
+  <table cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
+  <tr>
+  <td style="vertical-align: middle; text-align: center;">
+  <!--[if vml]><table align="left" cellpadding="0" cellspacing="0" role="presentation" style="display:inline-block;padding-left:0px;padding-right:0px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;"><![endif]-->
+  <!--[if !vml]><!-->
+  </td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  </td>
+  </tr>
+  </tbody>
+  </table><!-- End -->
+  </body>
+  </html>`;
 };
 module.exports = verificationEmailContent

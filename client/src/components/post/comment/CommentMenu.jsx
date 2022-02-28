@@ -45,18 +45,6 @@ const CommentMenu = ({ post, comment, setOnEdit, handleReplyToComment }) => {
                 </ListItemIcon>
                 Delete
             </MenuItem>
-            <MenuItem>
-                <ListItemIcon>
-                    <FlagOutlined fontSize="small" />
-                </ListItemIcon>
-                Report
-            </MenuItem>
-            <MenuItem onClick={handleReplyToComment}>
-                <ListItemIcon>
-                    <FlagOutlined fontSize="small" />
-                </ListItemIcon>
-                Reply
-            </MenuItem>
         </MUIMenu>
     )
 
