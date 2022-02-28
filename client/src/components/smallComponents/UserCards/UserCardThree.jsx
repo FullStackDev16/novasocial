@@ -47,9 +47,11 @@ const UserCardThree = ({ user }) => {
                 <Typography variant="body2">{"@" + user.username}</Typography>
             </Box>
             <Box className={classes.buttonsWrapper}>
-                <IconButton><CallOutlined /></IconButton>
-                <IconButton><VideoCallOutlined /></IconButton>
+                <IconButton disabled><CallOutlined /></IconButton>
+                <IconButton disabled><VideoCallOutlined /></IconButton>
+                <Link to={`/message/${user._id}`}>
                 <IconButton><ChatBubbleOutline /></IconButton>
+                </Link>
             </Box>
         </Box>
     );

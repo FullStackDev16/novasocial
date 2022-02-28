@@ -37,7 +37,7 @@ const Status = () => {
                 <Box className={classes.statusCardWrapper}>
                     {auth.user.story !== "" ? story(auth.user) : <AddYourStory />}
                     {auth.user.following.map((user, index) => <Box key={index}>
-                        {user.story !== "" ? story(user) : "no story "}
+                        {user.story !== "" ? story(user) : ""}
                     </Box>)}
                 </Box>
             </Box>
