@@ -1,4 +1,3 @@
-require("dotenv").config();
 const SocketServer = require('./socketServer')
 const { ExpressPeerServer } = require('peer')
 const express = require("express");
@@ -16,8 +15,7 @@ app.use(cookieParser());
 const URI = process.env.MONGODB_URL;
 mongoose.connect(
   URI,
-  {
-    useNewUrlParser: true,
+  {useNewUrlParser: true,
     useUnifiedTopology: true,
   },
   (err) => {
@@ -55,7 +53,7 @@ if (process.env.NODE_ENV == "production") {
 
 
 
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 http.listen(port, () => {
   console.log(`Server is listening on http://localhost:${port}`);
 });
