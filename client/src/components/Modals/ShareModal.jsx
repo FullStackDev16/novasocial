@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => {
 
 const ShareModal = ({ url, setIsShare }) => {
     const classes = useStyles()
-    const newUrl = `Hey ! This Amazing Post ${url}`
+    const newUrl = `Hey ! See This Amazing Post ${url}`
 
     const handleDrawerClose = () => {
         setIsShare(false)

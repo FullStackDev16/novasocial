@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => {
             display: "inline"
         },
         carousel: {
-            margin:"8px !important",
+            margin: "8px !important",
             borderRadius: theme.shape.borderRadius,
             userSelect: "none",
             overflow: "hidden",
@@ -65,9 +65,9 @@ const PostCardBody = ({ post }) => {
             <Box className={classes.carousel} >
                 {imageArr.length >= 2 ? <Carousel showThumbs={false} swipeable infiniteLoop useKeyboardArrows className={classes.carousel}>
                     {imageArr.map((image, index) => (
-                        <Box key={index} sx={{position:"relative"}}>
-                            <IconButton sx={{position:"absolute",top: 5,left:5,zIndex:50000}} onClick={()=>{saveAs(image.url,post.user.fullname)}}>
-                                <DownloadOutlined/>
+                        <Box key={index} sx={{ position: "relative" }}>
+                            <IconButton sx={{ position: "absolute", top: 5, left: 5, zIndex: 50000 }} onClick={() => { saveAs(image.url, post.user.fullname) }}>
+                                <DownloadOutlined />
                             </IconButton>
                             {IsImage(image.url) && ImageShow(image.url, classes.carouselItem)}
                             {IsVideo(image.url) && VideoShow(image.url, classes.carouselItem)}
@@ -76,7 +76,10 @@ const PostCardBody = ({ post }) => {
                 </Carousel>
                     : <>
                         {imageArr.map((image, index) => (
-                            <Box key={index}>
+                            <Box key={index} sx={{ position: "relative" }}>
+                                <IconButton sx={{ position: "absolute", top: 5, left: 5, zIndex: 50000 }} onClick={() => { saveAs(image.url, post.user.fullname) }}>
+                                    <DownloadOutlined />
+                                </IconButton>
                                 {IsVideo(image.url) && VideoShow(image.url, classes.imageItem)}
                                 {IsImage(image.url) && ImageShow(image.url, classes.imageItem)}
                             </Box>
@@ -91,19 +94,19 @@ const PostCardBody = ({ post }) => {
         <>
             {post.images.length !== 0 ? <CardMedia children={<ImageCarousel post={post} />} /> : ""}
             {post.content &&
-            <CardContent sx={{ whiteSpace: "pre-wrap" }}>
-                {
-                    post.content.length < 300
-                        ? post.content
-                        : readMore ? post.content + ' ' : post.content.slice(0, 300) + ''
-                }
-                {
-                    post.content.length > 300 &&
-                    <Box onClick={() => setReadMore(!readMore)} className={classes.readMore}>
-                        {readMore ? '' : ' ...Read More'}
-                    </Box>
-                }
-            </CardContent>
+                <CardContent sx={{ whiteSpace: "pre-wrap" }}>
+                    {
+                        post.content.length < 300
+                            ? post.content
+                            : readMore ? post.content + ' ' : post.content.slice(0, 300) + ''
+                    }
+                    {
+                        post.content.length > 300 &&
+                        <Box onClick={() => setReadMore(!readMore)} className={classes.readMore}>
+                            {readMore ? '' : ' ...Read More'}
+                        </Box>
+                    }
+                </CardContent>
             }
         </>
     )

@@ -104,7 +104,7 @@ const MsgDisplay = ({ user, msg, data }) => {
                     </Box>
                     <Box>
                         <Box className={classes.chatWrapper}>
-                            {msg.media.map((item, index) => (<Box key={index}>{IsVideo(item.url) ? VideoShow(item.url, classes.imageVideo, "350px", "200px") : ImageShow(item.url, classes.imageVideo, "350px", "200px")}</Box>))}
+                            {msg.media.map((item, index) => (<Box key={index}>{IsVideo(item.url) ? VideoShow(item.url, classes.imageVideo, "220px", "120px") : ImageShow(item.url, classes.imageVideo, "220px", "120px")}</Box>))}
                             {msg.text && <Box className={classes.chatText}>{msg.text}</Box>}
                             {msg.call && <Typography className={classes.chatCall}>{msg.call.times === 0 ? msg.call.video ? <VideocamOff color="error" size="small" /> : <PhoneDisabled color="error" size="small" /> : msg.call.video ? <Videocam color="success" size="small" /> : <Call color="success" size="small" />}</Typography>}
                         </Box>
