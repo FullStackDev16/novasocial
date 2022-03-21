@@ -33,17 +33,17 @@ const useStyles = makeStyles((theme) => {
             position: "absolute !important",
             right: 8,
             top: 8,
-            color: theme.palette.grey[900],
+            color: theme.palette.grey[100],
             strokeWidth: 1,
-            stroke: theme.palette.grey[900],
+            stroke: theme.palette.grey[100],
         },
         DeleteIcon: {
             position: "absolute !important",
             right: 48,
             top: 8,
-            color: theme.palette.grey[900],
+            color: theme.palette.grey[100],
             strokeWidth: 1,
-            stroke: theme.palette.grey[900],
+            stroke: theme.palette.grey[100],
         },
     };
 });

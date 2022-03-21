@@ -66,7 +66,7 @@ const PostCardBody = ({ post }) => {
                 {imageArr.length >= 2 ? <Carousel showThumbs={false} swipeable infiniteLoop useKeyboardArrows className={classes.carousel}>
                     {imageArr.map((image, index) => (
                         <Box key={index} sx={{ position: "relative" }}>
-                            <IconButton sx={{ position: "absolute", top: 5, left: 5, zIndex: 50000 }} onClick={() => { saveAs(image.url, post.user.fullname) }}>
+                            <IconButton color="primary" sx={{ position: "absolute", top: 5, left: 5, zIndex: 1 }} onClick={() => { saveAs(image.url, post.user.fullname) }}>
                                 <DownloadOutlined />
                             </IconButton>
                             {IsImage(image.url) && ImageShow(image.url, classes.carouselItem)}
@@ -77,7 +77,7 @@ const PostCardBody = ({ post }) => {
                     : <>
                         {imageArr.map((image, index) => (
                             <Box key={index} sx={{ position: "relative" }}>
-                                <IconButton sx={{ position: "absolute", top: 5, left: 5, zIndex: 50000 }} onClick={() => { saveAs(image.url, post.user.fullname) }}>
+                                <IconButton color="primary" sx={{ position: "absolute", top: 5, left: 5, zIndex: 1 }} onClick={() => { saveAs(image.url, post.user.fullname) }}>
                                     <DownloadOutlined />
                                 </IconButton>
                                 {IsVideo(image.url) && VideoShow(image.url, classes.imageItem)}

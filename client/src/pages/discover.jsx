@@ -33,7 +33,7 @@ const Discover = () => {
                             </Grid>
                             : <>
                                 {discover.posts.map((post, index) => (
-                                    <Grid item xs={7} md={6} key={index}>
+                                    <Grid item xs={12} md={6} key={index}>
                                         <PostCardSmall post={post} />
                                     </Grid>
                                 ))}
